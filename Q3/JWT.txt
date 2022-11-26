@@ -1,0 +1,21 @@
+JWT:
+JWT stands for JSON web token which is primarily used for secure communication between client and server in form of a JSON object. JSON stands for javascript object notation which is used to maintain data in a key value format.
+The Request for Comments (RFC) is a publication in a series from the principal technical development and standards-setting bodies for the Internet, most prominently the Internet Engineering Task Force (IETF).
+The Internet Engineering Task Force (IETF) is the leading Internet standards body. It develops open standards through open processes with one goal in mind: to make the Internet work better.
+JSON Web Tokens (JWT) are an open standard, which is defined in JSON Web Token (JWT) Specification RFC 7519 (MAY 2015).
+
+JWT are encoded as a JSON object and are normally digitally signed with a Hashed Message Authentication Code (HMAC). The most common scenario for using a JWT is authentication and authorization. When the user is logged in, each subsequent request includes the JWT, which allows the user to access resources that they are authorized to use.
+
+JWT token consists of 3 parts:
+	1. Header: Consists of 2 parts:
+		1. Type of the token (JWT).
+		2. Algorithm that is used.
+	2. Payload: Contains the claims. Claims are generally information about the user. Typically consisting of issued at time, expiry of token and other details of the user. 
+	3. Signature: Te encoded header and encoded payload are signed by using the signature algorithm from the header. The signature is used to verify that the issuer of the JWT is who it says it is and to ensure that the message wasn't changed along the way.
+
+3 Main advantages of JWT:
+1. Compact : JSON is less verbose, smaller in size thus making it a good choice to be passed in HTML and HTTP environments.
+2. Secure : As JWT tokens are generally encoded using symmetric key, the server can detect if any changes are done from the client side and only accept secure requets.
+3. Easier to process: JWT is used at internet scale. This means that it is easier to process on user's devices, especially mobile.
+
+source: https://datatracker.ietf.org/doc/html/rfc9068
